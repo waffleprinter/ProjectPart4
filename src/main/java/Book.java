@@ -73,11 +73,7 @@ public class Book {
     }
 
     public void clone(Book book) {
-        title = book.title;
-        author = book.author;
-        price = book.price;
-        publisher = book.publisher;
-        isbn = book.isbn;
+
     }
 
     public String getTitle() { return title; }
