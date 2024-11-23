@@ -29,12 +29,12 @@ public class Book {
         this.isbn = isbn;
     }
 
-    Book(Book book) {
-        this.title = book.title;
-        this.author = book.author;
-        this.price = book.price;
-        this.publisher = book.publisher;
-        this.isbn = book.isbn;
+    Book(Book otherBook) {
+        this.title = otherBook.title;
+        this.author = otherBook.author;
+        this.price = otherBook.price;
+        this.publisher = otherBook.publisher;
+        this.isbn = otherBook.isbn;
     }
 
     // THIS DOESN'T REALLY COVER IT
@@ -77,16 +77,16 @@ public class Book {
                 "ISBN", isbn);
     }
 
-    public boolean equals(Book book) {
-        return (title.equals(book.title)         &&
-                author.equals(book.author)       &&
-                price == book.price              &&
-                publisher.equals(book.publisher) &&
-                isbn.equals(book.isbn)
+    public boolean equals(Book otherBook) {
+        return (title.equals(otherBook.title)         &&
+                author.equals(otherBook.author)       &&
+                price == otherBook.price              &&
+                publisher.equals(otherBook.publisher) &&
+                isbn.equals(otherBook.isbn)
         );
     }
 
-    public void clone(Book book) {
+    public void clone(Book otherBook) {
 
     }
 
