@@ -42,7 +42,16 @@ public class Book {
     }
 
     public void toTitleCase() {
+        String[] titleWords = title.toLowerCase().split(" ");
+        String[] authorWords = author.toLowerCase().split(" ");
 
+        for (int i = 0; i < titleWords.length; i++) {
+            titleWords[i] = titleWords[i].substring(0, 1).toUpperCase() + titleWords[i].substring(1);
+        }
+
+        for (int i = 0; i < authorWords.length; i++) {
+            authorWords[i] = authorWords[i].substring(0, 1).toUpperCase() + authorWords[i].substring(1);
+        }
     }
 
     public String toString() {
