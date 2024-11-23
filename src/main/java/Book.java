@@ -37,8 +37,13 @@ public class Book {
         this.isbn = book.isbn;
     }
 
-    public void checkIsbnStatus() {
-
+    // THIS DOESN'T REALLY COVER IT
+    public int checkIsbnStatus() {
+        return switch (isbn.length()) {
+            case 13 -> 0;
+            case 17 -> 1;
+            default -> -1;
+        };
     }
 
     public void toTitleCase() {
