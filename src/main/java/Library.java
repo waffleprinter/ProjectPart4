@@ -23,8 +23,8 @@ public class Library {
      Creates a library with user-defined books.
      */
     Library(ArrayList<Book> otherBooks) {
-        for (Book book : otherBooks) {
-            this.books.add(new Book(book));
+        for (Book otherBook : otherBooks) {
+            books.add(new Book(otherBook));
         }
     }
 
@@ -33,8 +33,8 @@ public class Library {
      Creates a library with identical members to another library.
      */
     Library(Library otherLibrary) {
-        for (Book book : otherLibrary.books) {
-            this.books.add(new Book(book));
+        for (Book otherBook : otherLibrary.books) {
+            books.add(new Book(otherBook));
         }
     }
 
@@ -96,5 +96,5 @@ public class Library {
     }
 
     public ArrayList<Book> getBooks() { return books; }
-    public void setBooks(ArrayList<Book> books) { this.books = books; }
+    public void setBooks(ArrayList<Book> newBooks) { books = newBooks; }
 }
