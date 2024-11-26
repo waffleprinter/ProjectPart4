@@ -1,6 +1,6 @@
 /**
  @author Jacques-Conrad Calagui-Painchaud 6298805
- This class contains informatin about the book, along with multiple methods to
+ This class contains information about a book, along with a variety of methods.
  */
 public class Book {
     private String title;
