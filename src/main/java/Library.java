@@ -19,11 +19,11 @@ public class Library {
 
     /**
      Constructor
-     @param books arrayList of book objects.
+     @param otherBooks arrayList of book objects.
      Creates a library with user-defined books.
      */
-    Library(ArrayList<Book> books) {
-        for (Book book : books) {
+    Library(ArrayList<Book> otherBooks) {
+        for (Book book : otherBooks) {
             this.books.add(new Book(book));
         }
     }
