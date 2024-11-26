@@ -1,10 +1,18 @@
+/**
+ @author Jacques-Conrad Calagui-Painchaud 6298805
+ This class contains informatin about the book, along with multiple methods to
+ */
 public class Book {
     private String title;
     private String author;
     private double price;
     private String publisher;
-    private String isbn;
+    private String isbn; // Either 13 or 17 characters long
 
+    /**
+     Constructor
+     Creates a blank book with no information.
+     */
     Book() {
         title = "";
         author = "";
@@ -13,6 +21,11 @@ public class Book {
         isbn = "";
     }
 
+    /**
+     Constructor
+     @param title Title of the book.
+     Creates a blank book with no information, with a user-given title.
+     */
     Book(String title) {
         this.title = title;
         author = "";
@@ -21,6 +34,15 @@ public class Book {
         isbn = "";
     }
 
+    /**
+     Constructor
+     @param title Title of the book.
+     @param author Author of the book.
+     @param price Price of the book.
+     @param publisher Publisher of the book.
+     @param isbn ID of the book. Should be 13 or 17 characters long.
+     Creates a book with information provided by the user.
+     */
     Book(String title, String author, double price, String publisher, String isbn) {
         this.title = title;
         this.author = author;
@@ -29,6 +51,11 @@ public class Book {
         this.isbn = isbn;
     }
 
+    /**
+     Copy constructor
+     @param otherBook Another Book object.
+     Creates a new book with identical information to the bo.
+     */
     Book(Book otherBook) {
         this.title = otherBook.title;
         this.author = otherBook.author;
@@ -37,7 +64,11 @@ public class Book {
         this.isbn = otherBook.isbn;
     }
 
-    // THIS DOESN'T REALLY COVER IT
+    /**
+     The checkIsbnStatus method
+     @return 0 if the length is 13, 1 if the length is 17, -1 if the length is anything else (incorrect).
+     Checks if the length of the ISBN is of correct length (must be 13 or 17).
+     */
     public int checkIsbnStatus() {
         return switch (isbn.length()) {
             case 13 -> 0;
@@ -46,6 +77,10 @@ public class Book {
         };
     }
 
+    /**
+     The toTitleCase method
+     Changes the title and author of the book to title case.
+     */
     public void toTitleCase() {
         String[] titleWords = title.toLowerCase().split(" ");
         String[] authorWords = author.toLowerCase().split(" ");
@@ -59,6 +94,10 @@ public class Book {
         }
     }
 
+    /**
+     The toString method
+     @return Information about the book.
+     */
     public String toString() {
         String template =
                 """
@@ -77,6 +116,11 @@ public class Book {
                 "ISBN", isbn);
     }
 
+    /**
+     The equals method
+     @param otherBook another Book object.
+     @return whether the other book contains identical information.
+     */
     public boolean equals(Book otherBook) {
         return (title.equals(otherBook.title)         &&
                 author.equals(otherBook.author)       &&
