@@ -120,10 +120,6 @@ public class Book {
         );
     }
 
-    public void clone(Book otherBook) {
-
-    }
-
     // Simple getters
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
