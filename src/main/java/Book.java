@@ -10,28 +10,18 @@ public class Book {
     private String isbn; // Either 13 or 17 characters long
 
     /**
-     Constructor
+     Default constructor
      Creates a blank book with no information.
      */
-    Book() {
-        title = "";
-        author = "";
-        price = 0.0;
-        publisher = "";
-        isbn = "";
-    }
+    Book() { }
 
     /**
      Constructor
      @param title Title of the book.
-     Creates a blank book with no information, with a user-given title.
+     Creates a blank book with no information other than a user-given title.
      */
     Book(String title) {
         this.title = title;
-        author = "";
-        price = 0.0;
-        publisher = "";
-        isbn = "";
     }
 
     /**
@@ -54,7 +44,7 @@ public class Book {
     /**
      Copy constructor
      @param otherBook Another Book object.
-     Creates a new book with identical information to the bo.
+     Creates a new book with identical information to the other book.
      */
     Book(Book otherBook) {
         this.title = otherBook.title;
@@ -134,12 +124,14 @@ public class Book {
 
     }
 
+    // Simple getters
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
     public double getPrice() { return price; }
     public String getPublisher() { return publisher; }
     public String getIsbn() { return isbn; }
 
+    // Simple setters
     public void setTitle(String title) { this.title = title; }
     public void setAuthor(String author) { this.author = author; }
     public void setPrice(double price) { this.price = price; }
