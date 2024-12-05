@@ -60,6 +60,15 @@ public class Book {
      Checks if the length of the ISBN is of correct length (must be 13 or 17).
      */
     public int checkIsbnStatus() {
+        for (int i = 0; i < isbn.length(); i++) {
+            char c = isbn.charAt(i);
+
+            // ISBN contains non-digit, non-dash characters and is therefore invalid.
+            if (!(Character.isDigit(c) || c == '-')) {
+                return -1;
+            }
+        }
+
         return switch (isbn.length()) {
             case 13 -> 0;
             case 17 -> 1;
@@ -118,10 +127,6 @@ public class Book {
                 publisher.equals(otherBook.publisher) &&
                 isbn.equals(otherBook.isbn)
         );
-    }
-
-    public void clone(Book otherBook) {
-
     }
 
     // Simple getters
