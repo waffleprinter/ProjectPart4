@@ -91,11 +91,11 @@ public class Book {
     public String toString() {
         String template =
                 """
-                %-10s: %s%n
-                %-10s: %s%n
-                %-10s: %d%n
-                %-10s: %s%n
-                %-10s: %s%n
+                %-10s: %s
+                %-10s: %s
+                %-10s: %f
+                %-10s: %s
+                %-10s: %s
                 """;
 
         return String.format(template,
