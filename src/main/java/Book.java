@@ -91,6 +91,9 @@ public class Book {
         for (int i = 0; i < authorWords.length; i++) {
             authorWords[i] = authorWords[i].substring(0, 1).toUpperCase() + authorWords[i].substring(1);
         }
+
+        title = String.join(" ", titleWords);
+        author = String.join(" ", authorWords);
     }
 
     /**
