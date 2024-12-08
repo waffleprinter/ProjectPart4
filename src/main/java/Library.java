@@ -5,7 +5,7 @@ import java.util.ArrayList;
  This class defines a library with a list of books.
  */
 public class Library {
-    ArrayList<Book> books = new ArrayList<>();
+    private ArrayList<Book> books = new ArrayList<>();
 
     /**
      Constructor
